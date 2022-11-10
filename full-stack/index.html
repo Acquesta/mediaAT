@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <title>Médias para passar de ANO</title>
+    <style>
+
+        *{
+            margin: 3rem;
+            padding: 1rem;
+            width: 90%;
+        }
+
+        input, button{
+            margin-top: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Calcule suas médias para passar de ano</h1>
+
+    <input id="ac"  type="number" placeholder="Coloque a média da AC " value="" >
+    <input id="agh"  type="number" placeholder="Coloque a média da AGH " value="" >
+    <input id="tri1"  type="number" placeholder="Coloque a média do Primeiro trimestre " value="" >
+    <input id="tri2"  type="number" placeholder="Coloque a média do Segundo trimestre " value="" >
+
+    <button onclick="media()">Calcular </button>
+
+    Vc precisa tirar : <span></span>
+
+    <script>
+
+        const ac = document.querySelector("#ac").value;
+        const agh = document.querySelector("#agh").value;
+        const tri1 = document.querySelector("#tri1").value;
+        const tri2 = document.querySelector("#tri2").value;
+        const final = document.querySelector('span')
+        //made by Aragão
+
+        function media(){
+
+            var tri3 = ((tri1 + tri2 * 2 ) - 36 ) / 3
+            // (( ac * 3 + agh * 2 ) + tri3 * 10 ) / 5
+            final.innerHTML = (ac * 3 + agh * 2 + tri3 * 10) 
+
+        }
+
+
+
+        console.log(ac)
+
+        
+
+    </script>
+</body>
+
+</html>
